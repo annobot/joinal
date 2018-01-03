@@ -68,6 +68,9 @@ server.get('/con',function(req,res){
   res.render('contact');
 
 });*/
+server.get('/:any',function(req,res){
+res.redirect('/');
+});
 server.get('/',function(req,res){
   var walker  = walk.walk('./assets/slide/img', { followLinks: false });
 
