@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>database</title>
+<style>
+body {
+
+ Background: grey;
+ Color: black;
+ Padding: 5px;
+ }
+table {
+	max-width:980px;
+	table-layout:fixed;
+	margin:auto;
+	border: 2px solid black;
+	background: black;
+}
+thead {
+ Color:white;
+}
+th, td {
+	background: skyblue;
+}
+thead {
+	background:#f9f9f9;
+	display:table;
+	width:100%;
+}
+tbody {
+	height:400px;
+	overflow:auto;
+	overflow-x:hidden;
+	display:block;
+	width:100%;
+}
+tbody tr {
+	display:table;
+	width:100%;
+	table-layout:fixed;
+}
+th {
+ width: 25%;
+ background-color: darkslategray;
+}
+button {
+border-radius: 50px;
+border: 4px inset green;
+font-size: 25px;
+padding: 5px 40px;
+margin-left: 38%;
+margin-bottom: 10px;
+margin-top: 10px;
+}
+td {
+padding-left: 20px;
+}
+</style>
+</head>
+
+<body>
+<center><h1><u style="text-shadow: 2px 2px black; color: white;">CLIENT DETAILS</u><h1><center>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">NAME</th>
+      <th scope="col">EMAIL</th>
+      <th scope="col">PHONE</th>
+      <th scope="col">MESSAGE</th>
+    </tr>
+  </thead>
+  <tbody>
+<% for(var i=0; i < b.data.length; i++) { %>
+    <tr>
+      <td><%=b.data[i].name%></td>
+      <td style="overflow-X:hidden;"><%=b.data[i].email%></td>
+      <td><%=b.data[i].p%></td>
+      <td><%=b.data[i].msg%></td>
+    </tr>
+    <%}%>
+  </tbody>
+</table>
+
+<!--for calling to client-->
+<table style="margin-top: 6%;">
+  <thead>
+    <tr>
+      <th scope="col">NAME</th>
+      <th scope="col">PHONE</th>
+    </tr>
+  </thead>
+  <tbody>
+<% for(var i=0; i < b.data.length; i++) { %>
+      <tr>
+      <td><%=b.data[i].name%></td>
+      <td><a href="tel:<%=b.data[i].p%>"><button>call</button></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b style="font-family:sans-serif;color:red;">X</b></td>
+      </tr>
+<%}%>
+  </tbody>
+</table>
+<!--calling ends here-->
+</body>
+</html>

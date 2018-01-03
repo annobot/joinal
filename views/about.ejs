@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<head>
+
+<style>
+
+*{padding: 0%;
+margin: 0%;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+@keyframes flot {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	0% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+@keyframes flat {
+	0% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(+120px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+body{background-image: url("b.jpg");
+background-size: cover;
+
+}
+.up{
+
+  text-align: center;
+  margin-top:4%;
+  color:black;
+  width:auto;
+  font-size: 300%;
+  text-decoration: underline;
+}
+header{
+  z-index: 10;
+
+}
+/*{z-index:0;
+position: fixed;}*/
+.hi{
+
+  overflow: hidden !important;
+height: 2% !important;}
+.slidesjs-container{
+height: 2% !important;
+overflow: hidden !important;
+}
+
+</style>
+<!-- End SlidesJS Optional-->
+
+<!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+<style>
+
+  .container {
+    margin: 0 0;
+    padding: 2% 0 0 40%;
+
+  }
+
+  /* For tablets & smart phones */
+  @media (max-width: 767px) {
+    body{background-image: url("b.jpg");
+  background-size: cover;}
+  .container{padding: 0 0;
+}
+  }
+
+  /* For smartphones */
+  @media (max-width: 480px) {
+    body{background-image: url("b.jpg");
+  background-size: cover;}
+  .container{padding: 0 0;
+}
+  }
+
+  /* For smaller displays like laptops */
+  @media (min-width: 768px) and (max-width: 979px) {
+    .container{padding: 0 0;
+ }
+      body{background-image: url("b.jpg");
+    background-size: cover;}
+  }
+
+  /* For larger displays */
+  @media (min-width: 1200px) {  }
+
+</style>
+<style>
+body {margin:0;}
+
+</style>
+</head>
+
+<style media="screen">
+.menu{background-color:black;
+top:0px;
+position:static;
+height: 40px;
+margin-bottom: 0%;
+box-shadow: 0 10px 15px 0px rgba(0,0,0,0.8);
+padding-top: 2%;
+padding-left:2%;
+padding-right:2%;}
+.ite{display: inline;
+  float: right;
+}
+.logo{color: white;
+font-family: lobster;}
+a{text-decoration: none;}
+.ary{display: none;
+  border-radius: 50%;
+  color: white;
+font-size: 35px;
+top:1.5%;
+position: fixed;}
+
+@media (max-width: 720px) {
+.menu{padding-top: 3%;}
+  .ite{display: none;}
+  .logo{margin-left:33%;
+    font-size: 180%;
+  }
+.ary{display: inline;
+margin-left: 3%;}
+}
+
+</style>
+</head>
+<header>
+  <!--sidebar--------------------------------------------------------------------->
+
+  <style media="screen">
+  .hold{
+
+    display: block;
+    padding-top:2%;
+    border-bottom: 2px solid dimgrey;
+    border-top: 1px solid white;
+    height: auto;
+  text-align: center;
+  }
+    a{text-decoration: none;
+  text-align: justify;
+    color:black;
+  display: inline-flex;
+  margin-bottom: 3%;
+  font-size: 250%}
+    .hid{height: 100%;
+background-image:url('/b.jpg');
+      top: 0;
+      position: absolute;
+      z-index: 100000000;
+  margin-left:-320px;
+      box-shadow: inset 0 15px 0px 0px dimgrey;
+      padding-top: 10%;
+      padding-left: 3%;
+  padding-right: 3%;
+    width: 80%;
+    background-color:rgba(10,10,35,1);
+  color:black;
+  text-decoration: none;}
+
+  .ou{border-bottom:  5px solid rgba(0,0,0,0.9);
+    border-radius: 20px;
+  height: 30%;
+
+  }
+  .rl{
+    border-top: 5px  dimgrey;
+    border: 5px solid dimgrey;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: dimgrey;
+
+  color: white;
+  font-weight:bolder;
+  margin-left: 90px;
+  }
+  .set{
+    display: inline;
+  font-size: 40px;
+  }
+  @media (min-width: 720px){
+    .hid{display: none;}
+    .big{margin-top:5px;}
+  }
+  </style>
+  <div class="hid">
+    <div class="ou">
+
+    <div class="rl" style="background-image:url('/fo.png'); background-size:cover; background-repeat:no-repeat;">
+
+    </div>
+    <i class="back fa fa-chevron-circle-left fa-4" style=" margin-top:-20px; font-size:60px;display:block; float:right;" aria-hidden="true"></i>
+  </div>
+
+    <div class="hold" style="border-top:none;">
+    <a href="/" style="margin-top:15%;">Home</a>
+    <i class="set fa fa-home fa-8" aria-hidden="true"></i></div>
+  <div class="hold">
+    <a href="/gal">Whats New</a>
+    <i class="set fa fa-eercast fa-8" aria-hidden="true"></i>
+  </div>
+
+    <div class="hold">
+      <a href="/con">Contact Us</a>
+  <i class="set fa fa-tty fa-8" aria-hidden="true"></i>
+    </div>
+  <div class="hold" style="border-bottom:none;">
+    <a href="about">About Us</a>
+  <i class="set fa fa-users fa-8" aria-hidden="true"></i>
+  </div>
+
+    </div>
+    <!--sidebar-->
+  <i class="ary fa fa-chevron-circle-right fa-4" aria-hidden="true"></i>
+  <div class="menu">
+  <a class="logo" href="/">Foss Assam</a>
+  <div class="ite">
+    <a href="/">Home</a>
+    <a href="/gal">Whats New</a>
+    <a href="/con">Contact Us</a>
+    <a href="about">About Us</a>
+    </div>
+</div>
+</header>
+<script>
+  $('.ary').on('click', function () {
+$(".hid").animate({marginLeft: '0px' }, 500);
+
+  });
+
+  $('.back').on('click', function () {
+$(".hid").animate({marginLeft: '-500px' }, 500);
+
+  });
+</script>
+
+
+
+
+
+<div class="up" style="font-family:lobster;top:0;possition:fixed;box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);  animation: float 3s ease-in-out;">
+  About Us
+
+</div>
+<!--------------people---------------------->
+<div class="people">
+	<!--people separation------>
+<div class="container">
+
+
+		Joinal Ahmed::
+		Co-Founder
+
+		<div style="margin-left:40px;display:block;"class="image">
+	</div>
+</div>
+
+<!---people separation--->
+
+<style>
+.container{border-bottom-right-radius: 90%;
+height: auto;
+box-shadow: 0 5px 10px 0 black;
+width:85%;}
+.image{height:100px;
+width: 100px;
+border-radius: 50%;
+border: 5px solid black;
+display: block;}
+.data{display: inline-block;
+margin-left: 10px;
+line-height: 0px;
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylrsheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<head>
+
+<style>
+
+
+/*{z-index:0;
+position: fixed;}*/
+.hi{
+  overflow: hidden !important;
+height: 2% !important;}
+.slidesjs-container{
+height: 2% !important;
+overflow: hidden !important;
+}
+#slides {
+    margin-left: 12.5%;
+        width: 75%;
+    margin-top: 15px;
+    box-shadow: 0px 20px 15px rgba(0,0,0,0.8);
+    display: none;
+  }
+
+
+  #slides a:link,
+  #slides a:visited {
+    color: #333
+  }
+
+  #slides a:hover,
+  #slides a:active {
+    color: #9e2020
+  }
+
+
+</style>
+<!-- End SlidesJS Optional-->
+
+<!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+<style>
+  #slides {
+    display: none
+  }
+
+  .container {
+    margin: 0 auto;
+
+  }
+
+  /* For tablets & smart phones */
+  @media (max-width: 767px) {
+    body{background-image:url("b.jpg"); }
+#slides{  margin-left: 0%;
+    width: 100%;}
+img{height: 80%;}
+dai{margin-top:2px;}
+  }
+
+  /* For smartphones */
+  @media (max-width: 480px) {
+    body{background-image:url("b.jpg"); }
+  img{height: 100%;}
+  #slides{  margin-left: 0%;
+      width: 100%;}
+      %;}
+.dai{margin-top:10%;}
+  }
+
+  /* For smaller displays like laptops */
+  @media (min-width: 768px) and (max-width: 979px) {
+    body{background-image:url("b.jpg");
+  background-size: cover;}
+  img{height: 80%;}
+ dai{margin-top:2%;}
+}
+@media (min-width: 978px) {
+   body{background-image:url("b.jpg");
+
+}}
+  /* For larger displays */
+  @media (min-width: 1200px) {
+   body{background-image:url("b.jpg");}
+img{height: 80%;}
+.dai{margin-top:2px;}
+}
+</style>
+<style>
+body {margin:0;}
+@media (max-width: 600px) {
+body{background-image:url("b.jpg");}
+}
+</style>
+<style media="screen">
+.menu{background-color:black;
+top:0px;
+position:static;
+height: 40px;
+margin-bottom: 4%;
+box-shadow: 0 10px 15px 0px rgba(0,0,0,0.8);
+padding-top: 2%;
+padding-left:2%;
+padding-right:2%;}
+.ite{display: inline;
+  float: right;
+}
+.logo{color: white;
+font-family: lobster;}
+a{text-decoration: none;}
+.ary{display: none;
+  border-radius: 50%;
+  color: white;
+font-size: 35px;
+top:1.5%;
+position: fixed;}
+
+@media (max-width: 720px) {
+.menu{padding-top: 3%;}
+  .ite{display: none;}
+  .logo{margin-left:33%;
+    font-size: 180%;
+  }
+.ary{display: inline;
+margin-left: 3%;}
+}
+
+</style>
+</head>
+<header>
+  <i class="ary fa fa-chevron-circle-right fa-4" aria-hidden="true"></i>
+  <div class="menu">
+  <a class="logo" href="/">Pixel Dust</a>
+  <div class="ite">
+    <a href="/">Home</a>
+    <a href="/gal">Galary</a>
+    <a href="/con">Contact</a>
+    <a href="about">About</a>
+    </div>
+</div>
+</header>
+<body>
+<div class="hi">
+  <div id="slides">
+    <img src="slide/img/<%= qs.files[1] %>" alt="Sayon Sen">
+    <img src="slide/img/<%= qs.files[2] %>" alt="Sayon Sen">
+    <img src="slide/img/<%= qs.files[3] %>" alt="Sayon Sen">
+    <img src="slide/img/<%= qs.files[0] %>" alt="Sayon Sen">
+  </div>
+<style>
+  .big{
+   margin-left: 5%;
+  	  animation: flat 3s ease-in-out ;
+  	margin-top: 5%;
+  width:90%;
+  border-bottom-right-radius: 50px;
+   border-bottom-left-radius: 50px;
+
+  box-shadow: 0 20px 15px 0px rgba(0,0,0,0.6);
+    text-align: center;}
+    .tt{width: 100%;
+  text-align:center;
+    }
+    .oo{
+  background-color: rgba(0,0,0,0.5);
+      padding: 4px;
+      width:100px;height:100px;border-radius:50%;
+      animation: float 6s ease-in-out infinite;
+    }
+    .tweet{border-radius:50%;
+
+  height:80px;
+  width: 80px;
+    font-size:18px;
+    }
+    button{background-color:rgba(0, 0, 0, 0.3);}
+    .dai{font-family:lobster; text-align:center;font-size:30px;margin-top:11%;}
+</style>
+<style>
+  @media (min-width: 600px) {
+body{background-image:url("b.jpg");}
+.dai{margin-top:10px;}
+    .big{marin-top:20px;}
+    .tt{margin-left:0px;};
+    }
+</style>
+  <div class="container">
+  <div class="big animated flipInX"><a href="http://www.twitter.com"><button class="tweet  btn btn-primary fa-spin ">
+    Twitter<i class="fa fa-twitter fa-spin" style="font-size:36px"></i>
+  </button></a>
+  <a href="http://www.facebook.com"><button class="tweet  btn btn-primary fa-spin ">
+    F-Book<i class="fa fa-facebook fa-spin" style="font-size:36px"></i>
+  </button></a>
+  <a href="http://www.instagram.com"><button class="tweet  btn btn-primary fa-spin ">
+    Insta<i class="fa fa-instagram fa-spin" style="font-size:36px"></i>
+  </button></a>
+  <p></p>
+  <div class="tt" style=" margin-left:2%; text-align:center;"> <strong>Pixel Dust</strong>
+</div></div></div>
+<div class="dai">For Clicks Those Come Alive</div>
+<!-- End SlidesJS Required: Start Slides -->
+<style>
+  @media (min-width: 767px) {
+    .dai{margin-top:10px;}
+    .big{marin-top:130px;}
+    }
+</style>
+<!-- SlidesJS Required: Link to jQuery -->
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<!-- End SlidesJS Required -->
+
+<!-- SlidesJS Required: Link to jquery.slides.js -->
+<script src="js/jquery.slides.min.js"></script>
+<!-- End SlidesJS Required -->
+
+<!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+<script>
+  $(function() {
+    $('#slides').slidesjs({
+      width: 940,
+      height: 540,
+
+      play: {
+        active: false,
+        auto: true,
+        interval: 4000,
+        swap: true
+      },
+       navigation: false,
+       pagination: false,
+        generatePagination: false
+    });
+  });
+</script>
+
+</body>
+
+<div class="vac"></div>
+<style>
+/*{z-index:0;}*/
+</style>
+</html>

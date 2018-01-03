@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<style media="screen">
+*{padding: 0 0;
+margin: 0 0;}
+  body{
+    background-image: url(lenses.jpg);
+    background-size: cover;
+    background-color: black;
+    background-repeat: no-repeat;
+    font-weight: bold;
+  }
+
+.for{
+  display: inline-block;
+  height: 90%;
+
+}
+    .buttons button {
+        margin-top: 5%;
+        background-color:darkgrey;
+        font-weight: bold;
+    }
+
+    .buttons button:hover {
+        background-color: aliceblue;
+        cursor: pointer;
+    }
+
+input{
+  width: 82%;
+  padding: 4px;
+  box-sizing: border-box;
+  border: 3px inset rgba(40, 138, 127, 1) ;
+  background-color:darkseagreen;
+}
+  .container{
+    background-image: url("back2.png");
+    display: inline-block;
+    padding-top: 50px;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    height: 440px;
+    margin-top: 4%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-origin:padding-box;
+    border-bottom: 5px 10px black;
+  }
+@media (min-width: 768px) {
+    .container {
+        width: 50%;
+    }
+
+input{
+  width: 82%;
+  padding: 4px;
+  box-sizing: border-box;
+  border: 3px inset rgba(40, 138, 127, 1) ;
+}
+}
+    label{
+        display: block;
+    }
+  .bou{
+    display: block;
+    padding-bottom: 10px;color: white;
+    text-shadow: 2px 5px 15px rgba(0,0,0,1);
+
+  }
+  textarea{
+padding: 3px;
+    width: 80%;
+  margin-left: 10;
+  resize: none;
+  border: 3px inset rgba(40, 138, 127, 1) ;
+}
+</style>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+   <form class="for" action="/dr" method="post">
+<div class="bou">
+
+  <label for="name">Enter Your Name</label>
+  <input type="text" id="name" name="name" placeholder="eg: XYZ xyz..">
+</div>
+<div class="bou">
+
+     <label for="ema">Enter Your Email</label>
+
+     <input id="ema" type="email" name="em" value="" placeholder="eg: happy@clicks.com">
+   </div>
+<div class="bou">
+
+
+     <label id="pno" for="num">Enter Your mobile number</label>
+
+     <input  id="num" type="tel" name="phone" value="" placeholder="only for Indian clients">
+   </div>
+  <div class="bou">
+
+     <label for="ms">Enter Your message</label>
+
+     <textarea style="background-color:darkseagreen;" name="msg" id="ms"rows="8" cols="80" placeholder="Enter your Requirements..."></textarea>
+   </div>
+
+       <div class="buttons">
+    <input style="background-color:darkgrey;font-weight:bold;border: 3px inset rgba(40, 138, 127, 1) ;width:30%;height:30px; border-radius:50px;" type="submit" name="button"/>
+    <a href="tel:+919836322158"><button style="border: 3px inset rgba(40, 138, 127, 1) ;width:30%;height:30px;margin-left:60px; border-radius:50px;" type="button" name="button">Call Us</button></a>
+    </div>
+   </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<style media="screen">
+*{padding: 0 0;
+margin: 0 0;}
+  body{
+    background-image: url(lenses.jpg);
+    background-size: cover;
+    background-color: black;
+    background-repeat: no-repeat;
+    font-weight: bold;
+  }
+
+.for{
+  display: inline-block;
+  height: 90%;
+
+}
+    .buttons button {
+        margin-top: 5%;
+        background-color:darkgrey;
+        font-weight: bold;
+    }
+
+    .buttons button:hover {
+        background-color: aliceblue;
+        cursor: pointer;
+    }
+
+input{
+  width: 82%;
+  padding: 4px;
+  box-sizing: border-box;
+  border: 3px inset rgba(40, 138, 127, 1) ;
+  background-color:darkseagreen;
+}
+  .container{
+    background-image: url("back2.png");
+    display: inline-block;
+    padding-top: 50px;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    height: 440px;
+    margin-top: 4%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-origin:padding-box;
+    border-bottom: 5px 10px black;
+  }
+@media (min-width: 768px) {
+    .container {
+        width: 50%;
+    }
+
+input{
+  width: 82%;
+  padding: 4px;
+  box-sizing: border-box;
+  border: 3px inset rgba(40, 138, 127, 1) ;
+}
+}
+    label{
+        display: block;
+    }
+  .bou{
+    display: block;
+    padding-bottom: 10px;color: white;
+    text-shadow: 2px 5px 15px rgba(0,0,0,1);
+
+  }
+  textarea{
+padding: 3px;
+    width: 80%;
+  margin-left: 10;
+  resize: none;
+  border: 3px inset rgba(40, 138, 127, 1) ;
+}
+</style>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="msg" style=" text-align:center;width:80%;margin-left:10%;height:300px;font-size:150%;font-weight:bold;padding-top:60px;overflow:hidden;color:White;box-shadow: 0 25px 15px 0px rgba(0,0,0,0.7);">
+        Your Request is sent..<br>
+        We will contact you soon..
+      </div>
+      <br>
+    <a href="tel:+number not available">
+      <button
+      style="border: 3px inset rgba(40, 138, 127, 1) ;
+      width:30%;height:30px;
+      margin-left:0px;
+      border-radius:50px;"
+      type="button"
+      name="button">Call Us</button></a>
+    </div>
+  </body>
+</html>

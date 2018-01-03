@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title>database</title>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+body {position: fixed;
+  background-color: #3e94ec;
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+	width: 95%;
+}
+
+div.table-title {
+   display: block;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+}
+
+.table-title h3 {
+   color: #fafafa;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Roboto", helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 300px;
+  margin: auto;
+  max-width: 600px;
+  padding:0;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+
+}
+
+tbody{padding: 0 0;
+  overflow-x: visible;
+  overflow-y:auto;
+width: 100%;
+     height:300px;
+
+     display: block;
+   }
+th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+
+
+
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+
+td {
+  background:#FFFFFF;
+
+  text-align:center;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  width: 100%;
+  text-align: left;
+  padding: 0 0;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+td{width: 100%;}
+tr{width: 100%;}
+*{padding: 0 0;}
+</style>
+</head>
+
+
+
+<body>
+
+<table class="table-fill onet" style="margin-top:10%;">
+<thead>
+<tr>
+<th class="text-left">Clients</th>
+</tr>
+</thead>
+<tbody class="table-hover">
+<% for(var i=0; i < b.data.length; i++) { %>
+
+<tr  style="display:inline;">
+<td  class="row" id="<%=i%>" style="width:700px;height:80px;"><strong style="margin-left:20px;margin-top:30px;">
+  <%=b.data[i].name%></strong><p style="display:none;" class="name"><%=b.data[i].name%></p>
+<p style="display:none;" class="email"><%=b.data[i].email%></p>
+<p style="display:none;" class="p"><%=b.data[i].p%></p>
+<p style="display:none;" class="msg"><%=b.data[i].msg%></p>
+  <a class="cal" style="float:right;height:100%;z-index:1;width:25%;background-color:skyblue;margin:0;padding:0;text-decoration:none;color:white;font-weight:bold;" href="tel:<%=b.data[i].p%>">Call now</a></td>
+
+
+
+</tr>
+
+<% } %>
+
+</tbody>
+</table>
+
+<script>
+$(document).ready(function functionName() {
+
+  var name=$(this).children(".name").html();
+  var email=$(this).children(".email").html();
+  var p=$(this).children(".p").html();
+  var msg=$(this).children(".msg").html();
+$(".row").click(function functionName() {
+var name=$(this).children(".name").html();
+var email=$(this).children(".email").html();
+var p=$(this).children(".p").html();
+var msg=$(this).children(".msg").html();
+
+console.log(name);
+console.log(email);
+console.log(p);
+console.log(msg);
+$(".o").html(name);
+$(".t").html(email);
+$(".th").html(p);
+$(".f").html(msg);
+$(".out").css("display", "block");
+$(".onet").hide();
+});
+
+});
+</script>
+<div class="out" style="display:none;">
+
+  <table class="table-fill"style="margin-top:10%;">
+  <thead>
+  <tr>
+  <th class="text-left">DETAILS</th>
+  </tr>
+  </thead>
+  <tbody class="table-hover">
+
+
+  <tr  style="display:block;">
+  <td   style="width:340px;height:80px;display:block;">
+          <strong class="o"style="margin-left:20px;margin-top:30px;;">
+</strong>
+
+      </td>
+    </tr><tr><td   style="width:340px;height:80px;display:block;">
+              <strong class="t"style="margin-left:20px;margin-top:30px;;">
+    </strong>
+
+          </td>
+    </tr><tr>      <td   style="width:340px;height:80px;display:block;">
+                  <strong class="th"style="margin-left:20px;margin-top:30px;;">
+        </strong>
+
+      </td>
+</tr>
+      <tr>
+              <td   style="width:340px;height:80px;display:block;">
+                      <strong class="f"style="margin-left:20px;margin-top:30px;;">
+            </strong>
+
+          </td></tr>
+  </tr>
+
+
+
+
+  </tbody>
+  </table>
+
+
+</div>
+</body>
+
+</html>
