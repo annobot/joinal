@@ -29,7 +29,7 @@ var Person =mongoose.model('Person',person);
 
 server.set('view engine','ejs');
 server.use('/',express.static(__dirname + '/assets'));
-server.use('/dr',express.static(__dirname + '/assets'));
+/*server.use('/dr',express.static(__dirname + '/assets'));
 
 server.use('/con',express.static(__dirname + '/assets'));
 server.use('/about',express.static(__dirname + '/assets'));
@@ -48,7 +48,7 @@ server.use(bodyParser.json());
 });
 
 var upload = multer({ storage: Storage }).array("imgUploader", 3); //Field name and max count
-*/
+
 //server.use(bb());
 server.post('/dr',urlencodedParser,function(req,res){
   console.log(req.body);
@@ -67,7 +67,7 @@ res.render('res');
 server.get('/con',function(req,res){
   res.render('contact');
 
-});
+});*/
 server.get('/',function(req,res){
   var walker  = walk.walk('./assets/slide/img', { followLinks: false });
 
@@ -88,6 +88,7 @@ server.get('/',function(req,res){
 
 //console.log(qs);
 });
+/*
 server.get('/about',function(req,res){
 
   res.render('about');
@@ -122,7 +123,7 @@ server.post('/msg',function (req, res) {
 
 });
 */
-
+/*
 server.get('/a2',function(req,res){
 var di=Person.find({},function(err,data){
 if(err) console.log(err);;
@@ -155,6 +156,6 @@ console.log(qs.im);
 //console.log(qs);
 });
 
-
+*/
 server.listen(process.env.PORT || 3000);
 console.log('made it');
