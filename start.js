@@ -29,7 +29,7 @@ var Person =mongoose.model('Person',person);
 
 server.set('view engine','ejs');
 server.use('/',express.static(__dirname + '/assets'));
-/*server.use('/dr',express.static(__dirname + '/assets'));
+server.use('/dr',express.static(__dirname + '/assets'));
 
 server.use('/con',express.static(__dirname + '/assets'));
 server.use('/about',express.static(__dirname + '/assets'));
@@ -48,7 +48,7 @@ server.use(bodyParser.json());
 });
 
 var upload = multer({ storage: Storage }).array("imgUploader", 3); //Field name and max count
-
+*/
 //server.use(bb());
 server.post('/dr',urlencodedParser,function(req,res){
   console.log(req.body);
@@ -64,13 +64,10 @@ server.post('/dr',urlencodedParser,function(req,res){
 res.render('res');
 });
 
-server.get('/con',function(req,res){
+/*server.get('/con',function(req,res){
   res.render('contact');
 
 });*/
-server.get('/:any',function(req,res){
-res.redirect('/');
-});
 server.get('/',function(req,res){
   var walker  = walk.walk('./assets/slide/img', { followLinks: false });
 
@@ -91,12 +88,11 @@ server.get('/',function(req,res){
 
 //console.log(qs);
 });
-/*
 server.get('/about',function(req,res){
 
   res.render('about');
 });
-
+/*
 server.get('/hid',function(req,res){
   res.render('hide');
 var ip = req.header('x-forwarded-for') || req.connection.remoteAddress;
@@ -110,7 +106,12 @@ console.log(data);
 res.render('adminpanel',b={data});
 
 });
+});*/
+server.get('/:any',function(req,res){
+
+  res.render('in');
 });
+
 /*server.get('/up',function(req,res){
 
   res.render('contact');
@@ -126,7 +127,7 @@ server.post('/msg',function (req, res) {
 
 });
 */
-/*
+
 server.get('/a2',function(req,res){
 var di=Person.find({},function(err,data){
 if(err) console.log(err);;
@@ -137,7 +138,7 @@ res.render('ad2',b={data});
 });
 
 
-server.get('/gal',function(req,res){
+/*server.get('/gal',function(req,res){
   var im =[];
   var walker  = walk.walk('./Images', { followLinks: false });
 
@@ -158,7 +159,7 @@ console.log(qs.im);
 
 //console.log(qs);
 });
-
 */
+
 server.listen(process.env.PORT || 3000);
 console.log('made it');
