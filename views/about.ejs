@@ -262,6 +262,11 @@ background-image:url('/b.jpg');
     <a href="about">About Us</a>
     </div>
 </div>
+<style media="screen">
+
+.hid{top:0%;
+position: fixed;}
+</style>
 </header>
 <script>
   $('.ary').on('click', function () {
@@ -283,35 +288,196 @@ $(".hid").animate({marginLeft: '-500px' }, 500);
   About Us
 
 </div>
-<!--------------people---------------------->
-<div class="people">
-	<!--people separation------>
+<style>
+.container{
+
+}
+.big{
+
+	  animation: flat 3s ease-in-out ;
+	margin-top: 5%;
+width:85%;
+border-bottom-right-radius: 50px;
+ border-bottom-left-radius: 50px;
+
+box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  display: inline-flex;}
+  .tt{width: 75%;
+text-align:justify;
+  }
+  .oo{
+background-color: rgba(0,0,0,0.5);
+    padding: 4px;
+    width:50px;height:50px;border-radius:50%;
+    animation: float 6s ease-in-out infinite;
+  }
+
+</style>
+
 <div class="container">
+<div class="big animated flipInX"><img class="oo paul"  src="people/joi.jpg">
+<div class="tt" style=" margin-left:2%;"> <strong>Joinal Ahmed::</strong>
+	<br> ||Co-Founder||<br>
+   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<strong class="r ho1">read more..</strong><p class="on1"style="display:none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</div></div>
 
-
-		Joinal Ahmed::
-		Co-Founder
-
-		<div style="margin-left:40px;display:block;"class="image">
-	</div>
+<div class="big animated flipInX" style="float:right;">
+<div class="tt" style=" margin-left:9%;"> <strong>Brijesh Kumar::
+</strong><br>||Co.founder||<br>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <strong class="r ho2">read more..</strong>
+	<p class="on2"style="display:none;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</pr></div>
+<img class="oo kan" src="people/bri.jpg">
 </div>
 
-<!---people separation--->
+<div class="big animated flipInX"><img class="oo neo"  src="people/suo.jpg">
+<div class="tt" style=" margin-left:2%;"> <strong>Sujit Kumar Das::
+</strong><br>||TECH-Advisior||<br>specialization:Wedding|<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<strong class="r ho3">read more..</strong><p class="on3"style="display:none;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</pr>
+</div></div>
+
+<div class="big animated flipInX" style="float:right;">
+<div class="tt" style=" margin-left:9%;"> <strong>Sujeet Kumar Pandey::
+</strong><br>||TECH-Advisior||<br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<strong class="r ho4">read more..</strong><p class="on4"style="display:none;">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</pr></div>
+<img class="oo tan" src="people/sot.jpg">
+</div>
+
+</div>
+
+<style media="screen">
+.big{color:black;
+font-weight:bolder;}
+.r{color: white;}
+	.tt .strong{color:white;}
+</style>
+<script>
+  $(document).ready(function functionName() {
+$(".up").addClass('animated bounceInDown');
+$(".big").addClass('animated flipInX');
+    $(".ho1").click(function(){
+    $(".ho1").css("display", "none");
+    $(".on1").css("display", "block");
+    $(".on1").css("color", "white");
+  });
+
+      $(".ho2").click(function(){
+      $(".ho2").css("display", "none");
+      $(".on2").css("display", "block");
+      $(".on2").css("color", "white");
+    });
+    $(".ho3").click(function(){
+    $(".ho3").css("display", "none");
+    $(".on3").css("display", "block");
+    $(".on3").css("color", "white");
+  });
+
+  $(".ho4").click(function(){
+  $(".ho4").css("display", "none");
+  $(".on4").css("display", "block");
+  $(".on4").css("color", "white");
+});
+
+          var x=1;
+    $(".kan").click(function(){
+			$(".up").addClass('animated bounceInDown');
+			$(".big").addClass('animated flipInX');
+
+      if(x==1){
+    $(".kan").css("width", "100px");
+    $(".kan").css("height", "100px");
+x=0;
+  }
+else{
+    $(".kan").css("width", "50px");
+    $(".kan").css("height", "50px");
+x=1;}
+});
+$(".paul").click(function(){
+
+  if(x==1){
+$(".paul").css("width", "100px");
+$(".paul").css("height", "100px");
+x=0;
+}
+else{
+$(".paul").css("width", "50px");
+$(".paul").css("height", "50px");
+x=1;}
+});
+
+$(".neo").click(function(){
+
+  if(x==1){
+$(".neo").css("width", "100px");
+$(".neo").css("height", "100px");
+x=0;
+}
+else{
+$(".neo").css("width", "50px");
+$(".neo").css("height", "50px");
+x=1;}
+});
+
+$(".tan").click(function(){
+
+if(x==1){
+$(".tan").css("width", "100px");
+$(".tan").css("height", "100px");
+x=0;
+}
+else{
+$(".tan").css("width", "50px");
+$(".tan").css("height", "50px");
+x=1;}
+});
+
+  });
+</script>
 
 <style>
-.container{border-bottom-right-radius: 90%;
-height: auto;
-box-shadow: 0 5px 10px 0 black;
-width:85%;}
-.image{height:100px;
-width: 100px;
-border-radius: 50%;
-border: 5px solid black;
-display: block;}
-.data{display: inline-block;
-margin-left: 10px;
-line-height: 0px;
-}
 </style>
+
+<style>
+@media (min-width: 600px) {
+
+ .menu{padding-top: 0px;
+ height:6%;}
+
+.ite a{color:white;
+
+font-family: 'Roboto Mono', monospace;
+
+ font-size: 150%;
+}
+.hi{width: 100%;}
+.up{text-align: center;
+margin-top: 6.2% !important;}
+ body{width:100%;
+ text-align:center;}
+.hid{display: none;}
+.logo {font-size: 200%;
+  left:5% ;
+position: fixed;}
+.menu{top:0;
+  z-index: 5000;
+position: fixed;;width: 100%;}
+.ite a{height: 60%;
+}
+.ite{margin-left:  50% !important;}
+.yio{padding-top: 2px !important;
+width:70%;
+border-bottom-right-radius:15px;
+border-top-right-radius:15px; }
+.nou strong{
+font-size: 120% !important;}
+.nou{margin-left: 4% !important;}
+</style>
+
 </body>
 </html>
