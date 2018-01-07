@@ -14,7 +14,7 @@ var server=express();
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://annobot:hack#12@ds247007.mlab.com:47007/joinal/',{useMongoClient: true});
+mongoose.connect('mongodb://mayank:hack#12@ds247007.mlab.com:47007/joinal',{useMongoClient: true});
 //schema
 var person= new mongoose.Schema({
   name:String,
