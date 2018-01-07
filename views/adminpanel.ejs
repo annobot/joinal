@@ -190,6 +190,8 @@ tr{width: 100%;}
 <p style="display:none;" class="email"><%=b.data[i].email%></p>
 <p style="display:none;" class="p"><%=b.data[i].p%></p>
 <p style="display:none;" class="msg"><%=b.data[i].msg%></p>
+
+<p style="display:none;" class="ip"><%=b.data[i].ip%></p>
   <a class="cal" style="float:right;height:100%;z-index:1;width:25%;background-color:skyblue;margin:0;padding:0;text-decoration:none;color:white;font-weight:bold;" href="tel:<%=b.data[i].p%>">Call now</a></td>
 
 
@@ -213,15 +215,19 @@ var name=$(this).children(".name").html();
 var email=$(this).children(".email").html();
 var p=$(this).children(".p").html();
 var msg=$(this).children(".msg").html();
+var ip=$(this).children(".ip").html();
 
 console.log(name);
 console.log(email);
 console.log(p);
 console.log(msg);
+console.log(ip);
 $(".o").html(name);
 $(".t").html(email);
 $(".th").html(p);
 $(".f").html(msg);
+$(".f").html(msg);
+$(".i").html(ip);
 $(".out").css("display", "block");
 $(".onet").hide();
 });
@@ -262,7 +268,14 @@ $(".onet").hide();
             </strong>
 
           </td></tr>
-  </tr>
+ 
+  <tr  style="display:block;">
+  <td   style="width:340px;height:80px;display:block;">
+          <strong class="i"style="margin-left:20px;margin-top:30px;;">
+</strong>
+
+      </td>
+    </tr>
 
 
 
