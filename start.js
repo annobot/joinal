@@ -21,7 +21,6 @@ var person= new mongoose.Schema({
   email:String,
   p:String,
   msg:String
-  ip:String
 
 });
 
@@ -47,21 +46,13 @@ server.use(bodyParser.json());
         callback(null, file.fieldname + "_" + Date.now() + "_" + file.originalname);
     }
 });
-
 var upload = multer({ storage: Storage }).array("imgUploader", 3); //Field name and max count
 */
 //server.use(bb());
 server.post('/dr',urlencodedParser,function(req,res){
   console.log(req.body);
-  var regex = /(<([^>]+)>)/ig;
   var dat=req.body;
-  dat.name= dat.name.replace(regex, "");
-  dat.em= dat.em.replace(regex, "");
-  dat.phone= dat.phone.replace(regex, "");
-  dat.msg= dat.msg.replace(regex, "");
-  var ipa = req.header('x-forwarded-for') || req.connection.remoteAddress;
-    console.log(ipa);
-  var pone=Person({name:dat.name,email:dat.em,p:dat.phone,msg:dat.msg,ip:ipa}).save(
+  var pone=Person({name:dat.name,email:dat.em,p:dat.phone,msg:dat.msg}).save(
   function(err){
     if(err) console.log(err);
     console.log('done');
@@ -69,13 +60,11 @@ server.post('/dr',urlencodedParser,function(req,res){
   }
 
   );
-  var info={name:dat.name,email:dat.em,ph:dat.phone,msg:dat.msg,ip:ipa};
-res.render('res',qs={info});
+res.render('res');
 });
 
 server.get('/con',function(req,res){
   res.render('contact');
-
 });
 server.get('/',function(req,res){
   var walker  = walk.walk('./assets/slide/img', { followLinks: false });
@@ -101,26 +90,27 @@ server.get('/about',function(req,res){
 
   res.render('about');
 });
-
+/*
 server.get('/hid',function(req,res){
   res.render('hide');
 var ip = req.header('x-forwarded-for') || req.connection.remoteAddress;
   console.log(ip);
 });
-
 server.get('/a',function(req,res){
 var di=Person.find({},function(err,data){
 if(err) console.log(err);;
 console.log(data);
 res.render('adminpanel',b={data});
+});
+});*/
+server.get('/:any',function(req,res){
 
+  res.render('in');
 });
-});
+
 /*server.get('/up',function(req,res){
-
   res.render('contact');
 });
-
 server.post('/msg',function (req, res) {
   upload(req, res, function (err) {
           if (err) {
@@ -128,7 +118,6 @@ server.post('/msg',function (req, res) {
           }
           return res.end("File uploaded sucessfully!.");
       });
-
 });
 */
 
@@ -142,28 +131,22 @@ res.render('ad2',b={data});
 });
 
 
-server.get('/gal',function(req,res){
+/*server.get('/gal',function(req,res){
   var im =[];
   var walker  = walk.walk('./Images', { followLinks: false });
-
   walker.on('file', function(root, stat, next) {
       // Add this file to the list of files
-
       im.push(stat.name);
       next();
   });
-
   walker.on('end', function() {
-
       console.log(im);
       res.render('galery',qs={im});
 console.log(qs.im);
   });
-
-
 //console.log(qs);
 });
-
+*/
 
 server.listen(process.env.PORT || 3000);
 console.log('made it');
