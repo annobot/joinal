@@ -103,14 +103,14 @@ server.get('/hid',function(req,res){
   res.render('hide');
 var ip = req.header('x-forwarded-for') || req.connection.remoteAddress;
   console.log(ip);
-});
+});*/
 server.get('/a',function(req,res){
 var di=Person.find({},function(err,data){
 if(err) console.log(err);;
 console.log(data);
 res.render('adminpanel',b={data});
 });
-});*/
+});
 server.get('/:any',function(req,res){
 
   res.render('in');
