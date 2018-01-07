@@ -1,120 +1,329 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
 <html>
 <style media="screen">
-*{padding: 0 0;
-margin: 0 0;}
-  body{
-    background-image: url(lenses.jpg);
-    background-size: cover;
-    background-color: black;
-    background-repeat: no-repeat;
-    font-weight: bold;
-  }
+</style>
+<style>
+body {margin:0;}
 
-.for{
-  display: inline-block;
-  height: 90%;
+</style>
+</head>
 
+<style media="screen">
+.menu{background-color:black;
+top:0px;
+position:static;
+height: 40px;
+margin-bottom: 0%;
+box-shadow: 0 10px 15px 0px rgba(0,0,0,0.8);
+padding-top: 2%;
+padding-left:2%;
+padding-right:2%;}
+.ite{display: inline;
+  float: right;
 }
-    .buttons button {
-        margin-top: 5%;
-        background-color:darkgrey;
-        font-weight: bold;
-    }
+.logo{color: white;
+font-family: lobster;}
+a{text-decoration: none;}
+.ary{display: none;
+  border-radius: 50%;
+  color: white;
+font-size: 35px;
+top:1.5%;
+position: fixed;}
 
-    .buttons button:hover {
-        background-color: aliceblue;
-        cursor: pointer;
-    }
+@media (max-width: 720px) {
+.menu{padding-top: 3%;}
+  .ite{display: none;}
+  .logo{margin-left:33%;
+    font-size: 180%;
+  }
+.ary{display: inline;
+margin-left: 3%;}
+}
 
-input{
-  width: 82%;
-  padding: 4px;
-  box-sizing: border-box;
-  border: 3px inset rgba(40, 138, 127, 1) ;
-  background-color:darkseagreen;
+</style>
+</head>
+<header>
+  <!--sidebar--------------------------------------------------------------------->
+
+  <style media="screen">
+  .hold{
+
+    display: block;
+    padding-top:2%;
+    border-bottom: 2px solid dimgrey;
+    border-top: 1px solid white;
+    height: auto;
+  text-align: center;
+  }
+    a{text-decoration: none;
+  text-align: justify;
+    color:black;
+  display: inline-flex;
+  margin-bottom: 3%;
+  font-size: 250%}
+    .hid{height: 100%;
+background-image:url('/b.jpg');
+      top: 0;
+      position: absolute;
+      z-index: 100000000;
+  margin-left:-320px;
+      box-shadow: inset 0 15px 0px 0px dimgrey;
+      padding-top: 10%;
+      padding-left: 3%;
+  padding-right: 3%;
+    width: 80%;
+    background-color:rgba(10,10,35,1);
+  color:black;
+  text-decoration: none;}
+
+  .ou{border-bottom:  5px solid rgba(0,0,0,0.9);
+    border-radius: 20px;
+  height: 30%;
+
+  }
+  .rl{
+    border-top: 5px  dimgrey;
+    border: 5px solid dimgrey;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: dimgrey;
+
+  color: white;
+  font-weight:bolder;
+  margin-left: 90px;
+  }
+  .set{
+    display: inline;
+  font-size: 40px;
+  }
+  @media (min-width: 720px){
+    .hid{display: none;}
+    .big{margin-top:5px;}
+  }
+  </style>
+  <div class="hid">
+    <div class="ou">
+
+    <div class="rl" style="background-image:url('/fo.png'); background-size:cover; background-repeat:no-repeat;">
+
+    </div>
+    <i class="back fa fa-chevron-circle-left fa-4" style=" margin-top:-20px; font-size:60px;display:block; float:right;" aria-hidden="true"></i>
+  </div>
+
+    <div class="hold" style="border-top:none;">
+    <a href="/" style="margin-top:15%;">Home</a>
+    <i class="set fa fa-home fa-8" aria-hidden="true"></i></div>
+  <div class="hold">
+    <a href="/gal">Whats New</a>
+    <i class="set fa fa-eercast fa-8" aria-hidden="true"></i>
+  </div>
+
+    <div class="hold">
+      <a href="/con">Contact Us</a>
+  <i class="set fa fa-tty fa-8" aria-hidden="true"></i>
+    </div>
+  <div class="hold" style="border-bottom:none;">
+    <a href="about">About Us</a>
+  <i class="set fa fa-users fa-8" aria-hidden="true"></i>
+  </div>
+
+    </div>
+    <!--sidebar-->
+  <i class="ary fa fa-chevron-circle-right fa-4" aria-hidden="true"></i>
+  <div class="menu">
+  <a class="logo" href="/">Foss Assam</a>
+  <div class="ite">
+    <a href="/">Home</a>
+    <a href="/gal">Whats New</a>
+    <a href="/con">Contact Us</a>
+    <a href="about">About Us</a>
+    </div>
+</div>
+<style media="screen">
+
+.hid{top:0%;
+position: fixed;}
+
+</style>
+</header>
+<script>
+  $('.ary').on('click', function () {
+$(".hid").animate({marginLeft: '0px' }, 500);
+
+  });
+
+  $('.back').on('click', function () {
+$(".hid").animate({marginLeft: '-500px' }, 500);
+
+  });
+</script>
+<style media="screen">
+  *{padding: 0 0;
+  margin: 0 0;}
+body{background-color: rgba(0,0,0,0.7);
+    background-image: url('b.jpg');
 }
   .container{
-    background-image: url("back2.png");
-    display: inline-block;
-    padding-top: 50px;
-    text-align: center;
-    width: 80%;
-    margin-left: 10%;
-    height: 440px;
-    margin-top: 4%;
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-origin:padding-box;
-    border-bottom: 5px 10px black;
+background-color: darkgrey;
+    margin-top:0;
+    border: solid 1px black;
+    margin-left: 5%;
+    border-radius: 5px;
+    width:80%;
+    height: 80% !important;
+    padding: 4%;
   }
-@media (min-width: 768px) {
-    .container {
-        width: 50%;
+    .bou{
+
+      display: block;
+      margin-bottom: 6%;
+    }
+    input{border: unset;
+      padding: 1% 2%;
+    background-color: unset;
+  border-bottom: 1px solid rgba(0,0,0,0.3)}
+    .bou input{
+      font-family:lobster;
+      outline:none;
+     left:30%;
+     position: absolute;
+    }
+    .mm{text-align: center;
+
+      }
+      textarea{
+        all:unset;
+        font-family:lobster;
+        border-top: 2px solid grey;
+        width: 80%;
+        font-weight:lighter;
+        border-radius: 5px;
+        border-bottom: 1px solid grey;
+        border-left: 0.5px solid dimgrey;
+        border-right: 0.5px solid dimgrey;
+      }
+    .buttons{text-align: center;
+            margin-top: 5%;
+    }
+       .buttons button{
+         margin-left: 2%;
+         margin-top: 50px;
+all:unset;
+margin-left: 6%;
+border-bottom: 1px solid black;
+border-radius: 20px;
+         text-align: center;
+    font-size:115%;
+    padding: 1% 1%;
     }
 
-input{
-  width: 82%;
-  padding: 4px;
-  box-sizing: border-box;
-  border: 3px inset rgba(40, 138, 127, 1) ;
-}
-}
-    label{
-        display: block;
+    label{text-align:right;
+      font-family:lobster;
+      width:100%;
     }
-  .bou{
-    display: block;
-    padding-bottom: 10px;color: white;
-    text-shadow: 2px 5px 15px rgba(0,0,0,1);
-
-  }
-  textarea{
-padding: 3px;
-    width: 80%;
-  margin-left: 10;
-  resize: none;
-  border: 3px inset rgba(40, 138, 127, 1) ;
-}
 </style>
+
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Contact Us</title>
   </head>
   <body>
+    <style media="screen">
+      .dai{font-family:lobster; text-align:center;font-size:200%;
+      text-align: center;
+    box-shadow:inset 0 10px 15px 0 rgba(0,0,0,0.4) !important;}
+    </style>
+    <div class="dai" >For The Love Code</div>
+
     <div class="container">
    <form class="for" action="/dr" method="post">
+<div class="bu">
+
 <div class="bou">
 
-  <label for="name">Enter Your Name</label>
-  <input type="text" id="name" name="name" placeholder="eg: XYZ xyz..">
+  <label for="name">Name <i class='fa fa-user'></i></label>
+  <input type="text" id="name" name="name" placeholder="eg: CODE LOVER">
 </div>
 <div class="bou">
 
-     <label for="ema">Enter Your Email</label>
+     <label for="ema">Email <i class='fa fa-envelope'></i></label>
 
-     <input id="ema" type="email" name="em" value="" placeholder="eg: happy@clicks.com">
+     <input id="ema" type="email" name="em" value="" placeholder="eg: happy@coding.com">
    </div>
 <div class="bou">
 
-
-     <label id="pno" for="num">Enter Your mobile number</label>
-
+     <label id="pno" for="num">Phone <i class='fa fa-phone'></i></label>
      <input  id="num" type="tel" name="phone" value="" placeholder="only for Indian clients">
    </div>
-  <div class="bou">
+ </div>
+  <div class="mm bou">
 
-     <label for="ms">Enter Your message</label>
-
-     <textarea style="background-color:darkseagreen;" name="msg" id="ms"rows="8" cols="80" placeholder="Enter your Requirements..."></textarea>
+     <label for="msg">Message <i class='fa fa-pencil-square-o'></i></label>
+<br>
+     <textarea  name="msg" id="ms"rows="8" cols="30" placeholder="Enter your Requirements..."></textarea>
    </div>
 
        <div class="buttons">
-    <input style="background-color:darkgrey;font-weight:bold;border: 3px inset rgba(40, 138, 127, 1) ;width:30%;height:30px; border-radius:50px;" type="submit" name="button"/>
-    <a href="tel:+919836322158"><button style="border: 3px inset rgba(40, 138, 127, 1) ;width:30%;height:30px;margin-left:60px; border-radius:50px;" type="button" name="button">Call Us</button></a>
+    <button type="submit"><i class='fa fa-send'></i>Submit</button>
+    <button class="cb" name="button" type="button"><i class="fa fa-phone"></i>Call Us</button>
+    <a class="ca" href="tel:+919132701005"></a>
     </div>
    </form>
     </div>
+    <script>
+    $(".cb").click(function(){
+      alert("hello");
+    location.href = 'tel:9132701005';
+    });
+    </script>
+    <style>
+    @media (min-width: 600px) {
+      .dai{display: block;
+      font-size:250%;
+    margin-top: 3%;}
+     .menu{padding-top: 0px;
+     height:6%;}
+
+    .ite a{color:white;
+
+    font-family: 'Roboto Mono', monospace;
+
+     font-size: 150%;
+    }
+    .hi{width: 100%;}
+
+    .hid{display: none;}
+    .logo {font-size: 200%;
+      left:5% ;
+    position: fixed;}
+    .menu{top:0;
+      z-index: 5000;
+    position: fixed;;width: 100%;}
+    .ite a{height: 60%;
+    }
+    .mm{margin-bottom: 1%}
+    .buttons{margin-top:1%;}
+    .buttons button{border-bottom: 3px solid black;}
+    .ite{margin-left:  50% !important;}
+    .container{
+      box-shadow: 0 5px 15px 0 black !important;
+      margin-left: 10%;
+      width: 72%;
+      font-size: 120% !important;}
+    .bu{padding-left: 10%;}
+    .bu .bou input{
+      margin-bottom: 3%!important;
+      width:40%;}
+
+  }
+    </style>
+
   </body>
 </html>
