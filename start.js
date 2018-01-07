@@ -51,8 +51,15 @@ var upload = multer({ storage: Storage }).array("imgUploader", 3); //Field name 
 //server.use(bb());
 server.post('/dr',urlencodedParser,function(req,res){
   console.log(req.body);
+  var regex = /(<([^>]+)>)/ig;
   var dat=req.body;
-  var pone=Person({name:dat.name,email:dat.em,p:dat.phone,msg:dat.msg}).save(
+  dat.name= dat.name.replace(regex, "");
+  dat.em= dat.em.replace(regex, "");
+  dat.phone= dat.phone.replace(regex, "");
+  dat.msg= dat.msg.replace(regex, "");
+  var ipa = req.header('x-forwarded-for') || req.connection.remoteAddress;
+    console.log(ipa);
+  var pone=Person({name:dat.name,email:dat.em,p:dat.phone,msg:dat.msg,ip:ipa}).save(
   function(err){
     if(err) console.log(err);
     console.log('done');
@@ -60,7 +67,8 @@ server.post('/dr',urlencodedParser,function(req,res){
   }
 
   );
-res.render('res');
+  var info={name:dat.name,email:dat.em,ph:dat.phone,msg:dat.msg,ip:ipa};
+res.render('res',qs={info});
 });
 
 server.get('/con',function(req,res){
