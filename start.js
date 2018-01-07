@@ -20,8 +20,8 @@ var person= new mongoose.Schema({
   name:String,
   email:String,
   p:String,
-  msg:String
-
+  msg:String,
+  ip:String
 });
 
 var Person =mongoose.model('Person',person);
