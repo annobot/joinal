@@ -21,6 +21,7 @@ var person= new mongoose.Schema({
   email:String,
   p:String,
   msg:String
+  ip:String
 
 });
 
@@ -52,8 +53,15 @@ var upload = multer({ storage: Storage }).array("imgUploader", 3); //Field name 
 //server.use(bb());
 server.post('/dr',urlencodedParser,function(req,res){
   console.log(req.body);
+  var regex = /(<([^>]+)>)/ig;
   var dat=req.body;
-  var pone=Person({name:dat.name,email:dat.em,p:dat.phone,msg:dat.msg}).save(
+  dat.name= dat.name.replace(regex, "");
+  dat.em= dat.em.replace(regex, "");
+  dat.phone= dat.phone.replace(regex, "");
+  dat.msg= dat.msg.replace(regex, "");
+  var ipa = req.header('x-forwarded-for') || req.connection.remoteAddress;
+    console.log(ipa);
+  var pone=Person({name:dat.name,email:dat.em,p:dat.phone,msg:dat.msg,ip:ipa}).save(
   function(err){
     if(err) console.log(err);
     console.log('done');
@@ -61,13 +69,14 @@ server.post('/dr',urlencodedParser,function(req,res){
   }
 
   );
-res.render('res');
+  var info={name:dat.name,email:dat.em,ph:dat.phone,msg:dat.msg,ip:ipa};
+res.render('res',qs={info});
 });
 
-/*server.get('/con',function(req,res){
+server.get('/con',function(req,res){
   res.render('contact');
 
-});*/
+});
 server.get('/',function(req,res){
   var walker  = walk.walk('./assets/slide/img', { followLinks: false });
 
@@ -92,7 +101,7 @@ server.get('/about',function(req,res){
 
   res.render('about');
 });
-/*
+
 server.get('/hid',function(req,res){
   res.render('hide');
 var ip = req.header('x-forwarded-for') || req.connection.remoteAddress;
@@ -106,12 +115,7 @@ console.log(data);
 res.render('adminpanel',b={data});
 
 });
-});*/
-server.get('/:any',function(req,res){
-
-  res.render('in');
 });
-
 /*server.get('/up',function(req,res){
 
   res.render('contact');
@@ -138,7 +142,7 @@ res.render('ad2',b={data});
 });
 
 
-/*server.get('/gal',function(req,res){
+server.get('/gal',function(req,res){
   var im =[];
   var walker  = walk.walk('./Images', { followLinks: false });
 
@@ -159,7 +163,7 @@ console.log(qs.im);
 
 //console.log(qs);
 });
-*/
+
 
 server.listen(process.env.PORT || 3000);
 console.log('made it');
